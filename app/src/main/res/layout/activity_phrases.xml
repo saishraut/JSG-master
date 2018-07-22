@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:orientation="vertical"
+    tools:context="com.example.android.miwok.PhrasesActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Moisture"
+        android:textColor="@color/category_numbers"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:background="@color/tan_background"
+        android:layout_gravity="center"
+        android:paddingTop="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(percentage)"
+        android:textColor="@color/category_numbers"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:background="@color/tan_background"
+        android:layout_gravity="center"
+        android:paddingBottom="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/category_numbers">
+        <TextView
+            android:id="@+id/Onsite"
+            style="@style/CategoryStyle"
+            android:background="@color/category_numbers"
+            android:text="On site:"
+            android:layout_width="wrap_content"
+            android:textColor="@color/tan_background"
+            android:textAlignment="viewEnd"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/osvalue"
+            style="@style/CategoryStyle"
+            android:layout_width="wrap_content"
+            android:background="@color/category_numbers"
+            android:text="81%    "
+            android:textColor="@color/tan_background"
+            android:layout_toRightOf="@+id/numbers"
+            android:layout_weight="1"
+            android:textAlignment="viewStart"
+            android:layout_gravity="start"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Settings"
+        android:textColor="@color/category_numbers"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:background="@color/tan_background"
+        android:layout_gravity="center"
+        android:padding="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/category_numbers">
+
+        <TextView
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:background="@color/category_numbers"
+            android:text="Moisture:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tan_background"
+            />
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="decrement"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CategoryStyle"
+            android:text="50"
+            android:textColor="@color/tan_background"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="increment"
+            android:text="+" />
+
+        <Button
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="12dp"
+            android:onClick="sethumidity"
+            android:text="SET"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <Button
+            android:id="@+id/getWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:alpha="0.7"
+            android:background="#000"
+            android:padding="10sp"
+            android:text="Whats the moisture?"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:onClick="getWeather"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
